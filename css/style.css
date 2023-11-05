@@ -1,0 +1,208 @@
+/* Task 1 */
+.div1 {
+    background-color: rgb(229, 121, 222);
+    width: 300px;
+    height: 100px;
+    margin: 20px auto 0;
+    position: relative;
+}
+
+button {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(229, 121, 222);
+    color: white;
+    letter-spacing: 5px;
+    box-shadow: 5px 5px 7px black, 2px 2px 7px white inset;
+    text-shadow: 3px 3px 3px black;
+}
+
+button:active {
+    box-shadow: 5px 5px 7px black inset, -2px -2px 7px white inset;
+    text-shadow: 1px 1px 3px black;
+}
+
+/* Task 2 */
+
+figure {
+    width: 450px;
+    margin-top: 50px;
+    margin-left: 100px;
+    padding: 60px;
+    transition-property: border-radius, box-shadow;
+    transition-duration: 2s;
+}
+
+.task2_img {
+    margin-bottom: 20px;
+    transition-property: border-top-left-radius, border-top-right-radius;
+    transition-duration: 2s;
+}
+
+.task2_caption {
+    font-size: 20px;
+    font-style: italic;
+    color: brown;
+}
+
+figure:hover {
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px red, 0px 0px 10px red, 0px 0px 20px red, 0 0 40px red;
+}
+
+figure:hover .task2_img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* Task 3 */
+
+.task3_text {
+    margin-top: 50px;
+    margin-left: 500px;
+    font-size: 30px;
+    color: red;
+    animation-name: textAnimation;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes textAnimation {
+    from {
+        color: red;
+    }
+
+    to {
+        color: blue;
+    }
+}
+
+/* Task 4 */
+
+.task4_div1 {
+    position: relative;
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 25px;
+    color: green;
+    text-shadow: 1px 1px 3px black;
+}
+
+.task4_div2 {
+    width: 200px;
+    height: 200px;
+    border-top: 25px solid yellow;
+    border-left: 25px solid red;
+    border-right: 25px solid green;
+    border-bottom: 25px solid green;
+    border-radius: 50%;
+    animation-name: spinnerAnimation;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    position: absolute;
+}
+
+@keyframes spinnerAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.task4_div2:hover {
+    animation-play-state: paused;
+}
+
+
+
+
+/* Task 5 */
+
+header {
+    background-color: rgb(0, 128, 105);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    position: relative;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+}
+
+ul {
+    display: flex;
+    column-gap: 50px;
+}
+
+.header_li {
+    font-size: 40px;
+    color: whitesmoke;
+    text-shadow: 2px 2px 3px black;
+    transition-property: text-shadow;
+    transition-duration: 1.5s;
+}
+
+.header_li:hover {
+    text-shadow: 0 0 5px red, 0 0 20px red, 0 0 35px red, 0 0 55px red, 0 0 80px red, 0 0 110px red, 0 0 150px red;
+}
+
+/* Task 6 */
+
+
+.task6_div {
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 500px;
+    height: 40px;
+    position: relative;
+    top: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.background {
+    height: 40px;
+    position: absolute;
+    left: 0%;
+    border-radius: 20px;
+    animation-name: color;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+p {
+    z-index: 1;
+}
+
+@keyframes color {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+        background-color: red;
+    }
+}
